@@ -6,4 +6,4 @@
 This page requires an API key for [The Movies Database](https://www.themoviedb.org/).  
 Please make sure, that you have a valid [API key](https://www.themoviedb.org/settings/api), and place it in the header of the page.
 
-It's not safe to upload my API key here, but I'm planning to build a back-end version of this project that can store my key safely.
+It's not a safe practise to upload secret API keys here, but I'm planning to build a back-end version of this project that can store my key safely.
