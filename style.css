@@ -3,6 +3,7 @@
 :root {
   --primary-color: #22254b;
   --secondary-color: #373b69;
+  --header-font-color: #7378c5;
 }
 
 * {
@@ -18,15 +19,49 @@ body {
 header {
   background-color: var(--secondary-color);
   padding: 1rem;
+}
+
+.header-form {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-end;
 }
-
-header label {
-  color: #fff;
+.header-form-input {
+  margin-bottom: 0.5rem;
 }
 
-.search {
+@media screen and (min-width: 900px) {
+  .header-form {
+    flex-direction: row;
+  }
+  .header-form-input {
+    margin-bottom: 0;
+  }
+}
+
+.header-form-input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 500px) {
+  .header-form-input {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.header-form-input label {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+  margin: auto 0.5rem auto 0;
+}
+
+.header-form-input .search {
   background-color: transparent;
   border: 2px solid var(--primary-color);
   border-radius: 50px;
@@ -34,19 +69,19 @@ header label {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   color: #fff;
-  margin: auto 1rem;
+  margin: auto 1rem auto 0;
 }
 
-.search::placeholder {
-  color: #7378c5;
+.header-form-input .search::placeholder {
+  color: var(--header-font-color);
 }
 
-.search:focus {
+.header-form-input .search:focus {
   outline: none;
   background-color: var(--primary-color);
 }
 
-.api-key {
+.header-form-input .api-key {
   background-color: transparent;
   border: 2px solid var(--primary-color);
   border-radius: 50px;
@@ -55,16 +90,36 @@ header label {
   padding: 0.5rem 1rem;
   color: #fff;
   width: 22rem;
-  margin: auto 1rem;
+  margin: auto 1rem auto 0;
 }
 
-.api-key::placeholder {
-  color: #7378c5;
+.header-form-input .api-key::placeholder {
+  color: var(--header-font-color);
 }
 
-.api-key:focus {
+.header-form-input .api-key:focus {
   outline: none;
   background-color: var(--primary-color);
+}
+
+.header-form-button {
+  background-color: var(--primary-color);
+  color: var(--header-font-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: auto 1rem auto 1rem;
+}
+
+.header-form-button:hover {
+  background-color: var(--header-font-color);
+  color: var(--primary-color);
+}
+
+.header-form-button:focus {
+  outline: 0;
 }
 
 main {

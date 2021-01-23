@@ -15,11 +15,16 @@
   </head>
   <body>
     <header>
-      <form id="form">
-        <label for="api_key">API key:</label>
-        <input type="text" id="api_key" class="api-key" placeholder="API_KEY: https://www.themoviedb.org/" />
-        <label for="search">Search:</label>
-        <input type="text" id="search" class="search" placeholder="Search" />
+      <form class="header-form" id="form">
+        <div class="header-form-input">
+          <label for="api_key">API key:</label>
+          <input type="text" id="api_key" class="api-key" placeholder="API_KEY: https://www.themoviedb.org/" />
+        </div>
+        <div class="header-form-input">
+          <label for="search">Search:</label>
+          <input type="text" id="search" class="search" placeholder="Search" />
+        </div>
+        <button class="header-form-button" type="submit">Search</button>
       </form>
     </header>
 
